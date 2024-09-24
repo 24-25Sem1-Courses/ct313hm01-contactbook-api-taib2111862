@@ -99,7 +99,7 @@ async function updateContact(req, res, next) {
         console.log(error);
         return next(new ApiError(500, `Error updating contact with id=${id}`));
     }
-} 
+}
 
 async function deleteContact(req, res, next) {
     const { id } = req.params;

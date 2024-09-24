@@ -77,7 +77,7 @@ async function updateContact(id ,payload) {
         .select('*')
         .first();
     
-    if (!updateContact) {
+    if (!updatedContact) {
         return null;
     }
 
@@ -90,7 +90,7 @@ async function updateContact(id ,payload) {
 
     if (
         update.avatar &&
-        updateContact.avatar &&
+        updatedContact.avatar &&
         update.avatar !== updatedContact.avatar &&
         updatedContact.avatar.startsWith('/public/uploads')
     ) {
